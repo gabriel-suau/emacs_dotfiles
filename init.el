@@ -1,58 +1,16 @@
-;; .emacs.d/init.el
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                                   DEBUG                                    ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; For the moment, no debug because it is annoying on the daily-basis.
+;; Can be re-set to "t" if needed.
+(setq debug-on-error nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;                           melpa package support                            ;;
+;;                             Garbage collector                              ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Enables basic packaging support
-(require 'package)
-
-;; Adds the Melpa archive to the list of available repositories
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
-
-;; ;; Adds the Melpa stale archive to the list of available repositories
-;; (add-to-list 'package-archives
-;;              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-
-;; Initializes the package infrastructure
-(package-initialize)
-
-;; If there are no archived package contents, refresh them
-(when (not package-archive-contents)
-  (package-refresh-contents))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;                             package installation                           ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; myPackages contains a list of package names
-(defvar myPackages
-   '(better-defaults                ;; Set up some better Emacs defaults
-    elpy                            ;; Emacs Lisp Python Environment
-    flycheck                        ;; On the fly syntax checking
-    py-autopep8                     ;; Run autopep8 on save
-    ;; blacken                         ;; Black formatting on save
-    ;; ein                             ;; Emacs IPython Notebook
-    yasnippet                       ;; yasnippet
-    use-package                     ;; 
-    treemacs                        ;; Treemacs
-    treemacs-projectile             ;; Treemacs projectile
-    treemacs-icons-dired            ;; Treemacs icons-dired
-    treemacs-magit                  ;; Treemacs Magit
-    auctex                          ;; Tool for TeX support
-    auto-complete-auctex            ;; Auto completion in Texmode
-    bind-key                        ;; Tool to bind keys easily
-    magit                           ;; Git integration
-    ac-html                         ;; HTML auto-completion
-    )
-  )
-
-;; Scans the list in myPackages
-;; If the package listed is not already installed, install it
-(mapc #'(lambda (package)
-          (unless (package-installed-p package)
-            (package-install package)))
-      myPackages)
-
+;; Make startup faster by reducing the frequency of garbage
+;; collection.  The default is 800 kilobytes.  Measured in bytes.
+(setq gc-cons-threshold (* 100 1024 1024)) ;; 100 MB
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                straight.el                                 ;;
@@ -107,11 +65,11 @@
 (load "theme-config.el")                      ;; UI theme configuration
 (load "smartparens-config.el")                ;; Make parentheses smarter.
 (load "treemacs-config.el")                   ;; Tree-like view of project files
-(load "dashboard-config.el")
-(load "company-config.el")
-(load "all-the-icons-config.el")
-(load "whichkey-config.el")
-(load "flycheck-config.el")
+(load "dashboard-config.el")                  ;; Cool dashboard
+(load "company-config.el")                    ;; 
+(load "all-the-icons-config.el")              ;; Need icons
+(load "whichkey-config.el")                   ;; 
+(load "flycheck-config.el")                   ;; 
 
 ;; Developement environments
 ;; Python

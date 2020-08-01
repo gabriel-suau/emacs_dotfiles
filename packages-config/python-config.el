@@ -3,6 +3,9 @@
   :init
   (elpy-enable))
 
+(use-package py-autopep8
+  :ensure t)
+
 ;; Use IPython for REPL
 (setq python-shell-interpreter "jupyter"
       python-shell-interpreter-args "console --simple-prompt"
