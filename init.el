@@ -82,3 +82,5 @@
 (load "git-config.el")
 ;; HTML
 (load "html-config.el")
+;; C++
+(load "c++-config.el")

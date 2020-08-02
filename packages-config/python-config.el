@@ -1,7 +1,9 @@
 (use-package elpy
   :ensure t
   :init
-  (elpy-enable))
+  (elpy-enable)
+  :config
+  (setq elpy-modules (delete 'elpy-module-flymake elpy-modules)))
 
 (use-package py-autopep8
   :ensure t)
