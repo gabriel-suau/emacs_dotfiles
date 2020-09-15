@@ -1,4 +1,5 @@
 (use-package tex-site
+  :defer t
   :straight auctex
   :config
   ;; Activate nice interface between RefTeX and AUCTeX
@@ -27,6 +28,10 @@
   )
 
 (use-package pdf-tools
+  :ensure t
+  :mode  ("\\.pdf\\'" . pdf-view-mode)
   :config
-  (pdf-tools-install)
-  )
+  (setq-default pdf-view-display-size 'fit-page)
+  (setq pdf-annot-activate-created-annotations t)
+  (pdf-tools-install :no-query)
+  (require 'pdf-occur))

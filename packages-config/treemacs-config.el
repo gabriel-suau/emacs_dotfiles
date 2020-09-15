@@ -6,7 +6,7 @@
   (with-eval-after-load 'treemacs
     (add-to-list 'treemacs-pre-file-insert-predicates #'treemacs-is-file-git-ignored?))
   :bind
-  (("C-c n" . treemacs)
+  (("C-c t" . treemacs)
    ("C-c m" . treemacs-select-window))
 )
 
@@ -19,3 +19,7 @@
 
 (use-package treemacs-magit
   :after treemacs magit)
+
+;; (use-package lsp-treemacs
+;;   :after treemacs lsp
+;;   :config (lsp-treemacs-sync-mode 1))

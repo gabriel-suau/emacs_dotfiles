@@ -39,7 +39,7 @@
 (setq-default indent-tabs-mode nil)
 
 ;; Turn on autofill in all text files.
-(add-hook 'text-mode-hook 'turn-on-auto-fill)
+;; (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 ;; Display line and column numbers in the mode line.
 (line-number-mode t)

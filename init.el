@@ -64,10 +64,10 @@
 (load "generic-config.el")                    ;; Generic configuration like UI, font or backups
 (load "theme-config.el")                      ;; UI theme configuration
 (load "smartparens-config.el")                ;; Make parentheses smarter.
+(load "all-the-icons-config.el")              ;; Need icons
 (load "treemacs-config.el")                   ;; Tree-like view of project files
 (load "dashboard-config.el")                  ;; Cool dashboard
 (load "company-config.el")                    ;; 
-(load "all-the-icons-config.el")              ;; Need icons
 (load "whichkey-config.el")                   ;; 
 (load "flycheck-config.el")                   ;; 
 

@@ -1,5 +1,5 @@
-;; Indent in html mode
-(add-hook 'html-mode-hook
-          (lambda ()
-            ;; Default indentation is usually 2 spaces, changing to 4.
-            (set (make-local-variable 'sgml-basic-offset) 4)))
+(use-package company-web)
+(use-package ac-html-bootstrap)
+(use-package rainbow-mode
+  :diminish "🌈"
+  :hook (scss-mode less-mode css-mode))
