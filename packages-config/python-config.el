@@ -6,14 +6,18 @@
   (setq elpy-modules (delete 'elpy-module-flymake elpy-modules)))
 
 (use-package py-autopep8
-  :ensure t)
+  ;; :config
+  ;; (setq py-autopep8-options '("--max-line-length=90"))
+  ;; :hook
+  ;; (python-mode . py-autopep8-enable-on-save)
+  )
 
-;; Use IPython for REPL
-(setq python-shell-interpreter "jupyter"
-      python-shell-interpreter-args "console --simple-prompt"
-      python-shell-prompt-detect-failure-warning nil)
-(add-to-list 'python-shell-completion-native-disabled-interpreters
-             "jupyter")
+;; ;; Use IPython for REPL
+;; (setq python-shell-interpreter "jupyter"
+;;       python-shell-interpreter-args "console --simple-prompt"
+;;       python-shell-prompt-detect-failure-warning nil)
+;; (add-to-list 'python-shell-completion-native-disabled-interpreters
+;;              "jupyter")
 
 ;; Python indent preferences
 (add-hook 'python-mode-hook
@@ -24,7 +28,8 @@
 
 ;; Enable autopep8
 (require 'py-autopep8)
-(setq py-autopep8-options '("--ignore=E402"))
+;; Ignore the 'load all the modules before doing anything else' rule 
+;; (setq py-autopep8-options '("--ignore=E402"))
 (add-hook 'python-mode-hook
           'py-autopep8-enable-on-save
          )

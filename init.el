@@ -84,3 +84,5 @@
 (load "html-config.el")
 ;; C++
 (load "c++-config.el")
+;; Markdown
+(load "markdown-config")

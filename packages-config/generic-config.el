@@ -68,6 +68,7 @@
 
 ;; Switching buffer with C-tab.
 (bind-key* "<C-tab>" 'next-buffer)
+(bind-key* "<backtab>" 'previous-buffer)
 
 ;; List of opened buffers with C-x C-b.
 (global-set-key (kbd "C-x C-b") 'electric-buffer-list)
