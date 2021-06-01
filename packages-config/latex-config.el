@@ -12,6 +12,8 @@
   (setq reftex-ref-macro-prompt nil)
   ;; Turn on RefTeX in AUCTeX
   (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+  ;; Set Biblatex by default
+  (setq bibtex-dialect 'biblatex)
   ;; Turn on folding
   ;; From https://www.gnu.org/software/auctex/manual/auctex/Folding.html
   (add-hook 'LaTeX-mode-hook (lambda ()

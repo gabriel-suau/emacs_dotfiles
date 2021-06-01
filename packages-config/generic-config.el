@@ -42,9 +42,10 @@
 ;; (add-hook 'text-mode-hook 'turn-on-auto-fill)
 
 ;; Display line and column numbers in the mode line.
-(line-number-mode t)
+(line-number-mode 1)
 (column-number-mode 1)
 (size-indication-mode t)
+(global-linum-mode t)
 
 ;; When some text is selected, writing overwrites the existing text
 (delete-selection-mode 1)
@@ -79,7 +80,6 @@
 (setq backup-directory-alist (list (cons "." backup-dir)))
 
 ;; I dunno what this does.
-(setq c-basic-offset 4)
 (setq tab-width 4)
 (setq-default indent-tabs-mode nil)
 

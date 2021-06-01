@@ -70,6 +70,7 @@
 (load "company-config.el")                    ;; 
 (load "whichkey-config.el")                   ;; 
 (load "flycheck-config.el")                   ;; 
+;; (load "yasnippet-config.el")
 
 ;; Developement environments
 ;; Python
@@ -86,3 +87,9 @@
 (load "c++-config.el")
 ;; Markdown
 (load "markdown-config")
+;; YAML
+(load "yaml-config.el")
+;; Makefile mode
+(load "makefile-config.el")
+;; GLSL-mode
+;; (load "glsl-config.el")
