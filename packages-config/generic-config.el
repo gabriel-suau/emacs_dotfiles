@@ -16,11 +16,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (prefer-coding-system 'utf-8)
 ;; Set default font
-(set-face-attribute 'default nil
-                    :family "SauceCodePro Nerd Font"
-                    :height 100
-                    :weight 'normal
-                    :width 'normal)
+;; (set-face-attribute 'default nil
+;;                     :family "SauceCodePro Nerd Font"
+;;                     :height 100
+;;                     :weight 'normal
+;;                     :width 'normal)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                             Basic Customization                            ;;
