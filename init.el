@@ -71,6 +71,7 @@
 (load "whichkey-config.el")                   ;; 
 (load "flycheck-config.el")                   ;; 
 ;; (load "yasnippet-config.el")
+(load "org-config.el")
 
 ;; Developement environments
 ;; Python
