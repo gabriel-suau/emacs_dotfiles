@@ -16,10 +16,10 @@
   (doom-themes-org-config)
   )
 
-(use-package solaire-mode
-  :hook
-  ((change-major-mode after-revert) . turn-on-solaire-mode)
-  (minibuffer-setup . solaire-mode-in-minibuffer)
-  :config
-  (solaire-global-mode +1)
-  (solaire-mode-swap-bg))
+;; (use-package solaire-mode
+;;   :hook
+;;   ((change-major-mode after-revert) . turn-on-solaire-mode)
+;;   (minibuffer-setup . solaire-mode-in-minibuffer)
+;;   :config
+;;   (solaire-global-mode +1)
+;;   (solaire-mode-swap-bg))
