@@ -1,8 +1,9 @@
 (use-package cc-mode
   :config
   ;; "*.h" are open with c-mode by default, make it c++-mode
-  (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+  ;; (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
   (add-to-list 'auto-mode-alist '("\\.cl\\'" . c++-mode))
+  (add-to-list 'auto-mode-alist '("\\.cu\\'" . c-mode))
   (setq-default c-basic-offset 2)
   (setq-default fill-column 80)
   :hook

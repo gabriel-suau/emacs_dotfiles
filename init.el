@@ -38,7 +38,6 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                                 custom.el                                  ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -70,7 +69,7 @@
 (load "company-config.el")                    ;; 
 (load "whichkey-config.el")                   ;; 
 (load "flycheck-config.el")                   ;; 
-;; (load "yasnippet-config.el")
+(load "yasnippet-config.el")
 (load "org-config.el")
 
 ;; Developement environments
@@ -86,6 +85,8 @@
 (load "html-config.el")
 ;; C++
 (load "c++-config.el")
+;; CMake
+(load "cmake-config.el")
 ;; Markdown
 (load "markdown-config")
 ;; YAML
@@ -94,3 +95,7 @@
 (load "makefile-config.el")
 ;; GLSL-mode
 ;; (load "glsl-config.el")
+;; Freefem-mode
+(load "freefem-config.el")
+;; ESS-mode
+(load "ess-mode.el")

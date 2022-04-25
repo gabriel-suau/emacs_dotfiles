@@ -20,6 +20,10 @@
 (use-package treemacs-magit
   :after treemacs magit)
 
-;; (use-package lsp-treemacs
-;;   :after treemacs lsp
-;;   :config (lsp-treemacs-sync-mode 1))
+(use-package lsp-treemacs
+  :after treemacs lsp
+  :config (lsp-treemacs-sync-mode 1))
+
+;; (use-package treemacs-all-the-icons
+;;   :after treemacs all-the-icons
+;;   )

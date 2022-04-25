@@ -29,6 +29,7 @@
 ;; Maximise Emacs on startup
 ;; From https://emacs.stackexchange.com/a/3008
 (toggle-frame-maximized)
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; Sometimes emacs asks us to write 'yes' or 'no'. This is too long.
 ;; Change it to one press on the keys 'y' or 'n'.
@@ -82,6 +83,18 @@
 ;; I dunno what this does.
 (setq tab-width 4)
 (setq-default indent-tabs-mode nil)
+
+;; ctags
+(defvar path-to-ctags "/usr/bin/ctags")
+
+(defun create-tags (dir-name)
+  "Create tags file."
+  (interactive "Directory: ")
+  (shell-command
+   (format "%d -f TAGS -e -R %s" path-to-ctags (directory-file-name dir-name))))
+
+(setq split-height-threshold nil)
+(setq split-width-threshold 60)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;                  REMOVE USELESS BUFFERS                   ;;
